@@ -71,7 +71,8 @@ Final output will be available in the `dist/` directory.
 
 > Requirements: Node 18+, React 18.2, Rspack, Zephyr Plugin
 
-Zephyr Cloud link of the application deployed
+Zephyr Cloud link of the application deployed:
 
 ```
+https://leonardo-de-melo-91-host-zephyr-mf-app-github-io--bb80f041f-ze.zephyrcloud.app/
 ```
