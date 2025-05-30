@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React, { Suspense } from 'react';
+const RemoteWidget = React.lazy(() => import('remote/Widget'));
 
-import "./index.css";
+const App = () => {
+  return (
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>🏠 Host App</h1>
+      <Suspense fallback={<div>Loading remote widget...</div>}>
+        <RemoteWidget />
+      </Suspense>
+    </div>
+  );
+};
 
-const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: host</div>
-    <div>Framework: react-18</div>
-  </div>
-);
-
-const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
-root.render(<App />);
+export default App;
